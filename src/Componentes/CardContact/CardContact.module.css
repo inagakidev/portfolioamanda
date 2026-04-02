@@ -1,0 +1,53 @@
+
+
+.contactCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+
+  background: #121212;
+  padding: 14px 20px;
+
+  border-radius: 14px;
+  border: 1px solid rgba(139, 92, 246, 0.4);
+
+  width: fit-content;
+
+  transition: all 0.3s ease;
+}
+
+
+.contact-card:hover {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+  transform: translateY(-2px);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.info .label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: start;
+}
+
+.info .value, a {
+    font-weight: 800;
+    color: aliceblue;
+    text-align: start;
+}
+
+.icon {
+    color:#C300E5 ;
+    font-size: 1.4rem;
+    align-items: center;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
