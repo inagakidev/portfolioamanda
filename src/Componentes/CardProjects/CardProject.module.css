@@ -1,5 +1,5 @@
 .card {
-  width: 360px;
+  width: 380px;
   border-radius: 16px;
   overflow: hidden;
   background-color: #0b0b0f;
@@ -54,3 +54,15 @@
   padding: 5px 10px;
   border-radius: 999px;
 }
+
+@media screen and (max-width: 750px) {
+  .card {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 900px) {
+   .card {
+    width: 320px;
+  }
+} 

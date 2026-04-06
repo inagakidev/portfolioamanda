@@ -5,12 +5,51 @@ import { useState } from 'react'
 import CardStack from './Componentes/CardStacks/CardStack'
 import CardProject from './Componentes/CardProjects/CardProject'
 import CardContact from './Componentes/CardContact/CardContact'
-import { RiLinkedinBoxFill } from "react-icons/ri";
-import { RiInstagramFill} from "react-icons/ri";
-import { RiGithubFill } from "react-icons/ri";
+import { RiInstagramFill, RiGithubFill, RiLinkedinBoxFill, RiNextjsFill, RiTailwindCssFill} from "react-icons/ri";
+import { FaHtml5, FaCss3Alt, FaReact } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io5";
+import { FiFigma } from "react-icons/fi";
 import Footer from "./Componentes/Footer/Footer"
 
 function App() {
+
+  const cardStack = [
+    {
+      icon: <FaHtml5 color={'rgb(173, 96, 33)'} />,
+      stackName: 'HTML5'
+    },
+
+    {
+      icon: <FaCss3Alt color={'rgb(41, 122, 199)'} />,
+      stackName: 'CSS3'
+    },
+
+    {
+      icon: <IoLogoJavascript color={'rgb(224, 226, 122)'} />,
+      stackName: 'JAVASCRIPT'
+    },
+
+    {
+      icon: <FaReact color={'rgb(67, 139, 207)'} />,
+      stackName: 'REACT.JS'
+    },
+
+    {
+      icon: <RiNextjsFill color={'rgb(233, 238, 241)'} />,
+      stackName: 'NEXT.JS'
+    },
+
+    {
+      icon: <RiTailwindCssFill color={'rgb(41, 162, 199)'} />,
+      stackName: 'TAILWIND'
+    },
+
+    {
+      icon: <FiFigma color={'rgb(255, 255, 255)'} />,
+      stackName: 'FIGMA'
+    },
+
+  ]
   const contact = [
     {
       icon: <RiLinkedinBoxFill />,
@@ -55,13 +94,7 @@ function App() {
     },
 
     {
-      label: "03 — PROJETOS",
-      titulo: "Selecione ",
-      span: "o Projeto"
-    },
-
-    {
-      label: "05 — CONTATO",
+      label: "04 — CONTATO",
       titulo: "Vamos Criar Algo ",
       span: "Incrível Juntos"
     }
@@ -142,39 +175,42 @@ function App() {
                 titulo={header[1].titulo}
                 span={header[1].span}
               />
-                  <div className={styles.cardMae}>
-                    <CardStack
-                      nameArea="Frontend"
-                      stacks={[
-                        { nome: "HTML", nivel: "Avançado" },
-                        { nome: "CSS", nivel: "Avançado" },
-                        { nome: "JavaScript", nivel: "Intermediário" },
-                        { nome: "React", nivel: "Intermediário" },
-                        { nome: "Git", nivel: "Básico" }
-                      ]}
-                    />
-                    <CardStack
-                      nameArea="Frontend"
-                      stacks={[
-                        { nome: "HTML", nivel: "Avançado" },
-                        { nome: "CSS", nivel: "Avançado" },
-                        { nome: "JavaScript", nivel: "Intermediário" },
-                        { nome: "React", nivel: "Intermediário" },
-                        { nome: "Git", nivel: "Básico" }
-                      ]}
-                    />
+            <div className={styles.cardsStacks}>
+              <CardStack
+                icon={cardStack[0].icon}
+                stackName={cardStack[0].stackName}
+              />
 
-                    <CardStack
-                      nameArea="Frontend"
-                      stacks={[
-                        { nome: "HTML", nivel: "Avançado" },
-                        { nome: "CSS", nivel: "Avançado" },
-                        { nome: "JavaScript", nivel: "Intermediário" },
-                        { nome: "React", nivel: "Intermediário" },
-                        { nome: "Git", nivel: "Básico" }
-                      ]}
-                    />
-                  </div>
+              <CardStack
+                icon={cardStack[1].icon}
+                stackName={cardStack[1].stackName}
+              />
+
+              <CardStack
+                icon={cardStack[2].icon}
+                stackName={cardStack[2].stackName}
+              />
+
+              <CardStack
+                icon={cardStack[3].icon}
+                stackName={cardStack[3].stackName}
+              />
+
+              <CardStack
+                icon={cardStack[4].icon}
+                stackName={cardStack[4].stackName}
+              />
+
+              <CardStack
+                icon={cardStack[5].icon}
+                stackName={cardStack[5].stackName}
+              />
+
+              <CardStack
+                icon={cardStack[6].icon}
+                stackName={cardStack[6].stackName}
+              />
+            </div>
           </section>
 
           <section className={styles.projects}>
@@ -214,9 +250,9 @@ function App() {
           <section className={styles.contact}>
                  <div className={styles.contactText}>
                 <HeaderSection
-                  label={header[4].label}
-                  titulo={header[4].titulo}
-                  span={header[4].span}
+                  label={header[3].label}
+                  titulo={header[3].titulo}
+                  span={header[3].span}
                 />
                 <p>Aberta a projetos freelance, colaborações e oportunidades full-time. Vamos conversar.</p>
               </div>     
