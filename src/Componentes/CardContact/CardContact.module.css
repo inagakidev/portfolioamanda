@@ -2,20 +2,22 @@
 
 .contactCard {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 16px;
   margin-top: 20px;
 
   background: #121212;
   padding: 14px 20px;
-
-  border-radius: 14px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
   border: 1px solid rgba(139, 92, 246, 0.4);
   transition: all 0.3s ease;
 }
 
 
-.contact-card:hover {
+.contactCard:hover {
   box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
   transform: translateY(-2px);
 }
@@ -39,10 +41,10 @@
 }
 
 .icon {
-    color:#C300E5 ;
     font-size: 1.4rem;
     align-items: center;
     display: flex;
+    color: var(--accent);
 }
 
 a {

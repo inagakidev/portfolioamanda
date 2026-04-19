@@ -6,10 +6,12 @@ import CardStack from './Componentes/CardStacks/CardStack'
 import CardProject from './Componentes/CardProjects/CardProject'
 import CardContact from './Componentes/CardContact/CardContact'
 import { RiInstagramFill, RiGithubFill, RiLinkedinBoxFill, RiNextjsFill, RiTailwindCssFill} from "react-icons/ri";
-import { FaHtml5, FaCss3Alt, FaReact } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaReact, FaGitAlt } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
-import { FiFigma } from "react-icons/fi";
-import Footer from "./Componentes/Footer/Footer"
+import { FiFigma, FiGithub } from "react-icons/fi";
+import Footer from './Componentes/Footer/Footer'
+import ContactForm from './Componentes/Form/Form'
+import canilImg from '../src/assets/canilbeagle.png'
 
 function App() {
 
@@ -49,26 +51,30 @@ function App() {
       stackName: 'FIGMA'
     },
 
+    {
+      icon: <FiGithub color={'rgb(255, 255, 255)'} />,
+      stackName: 'GITHUB'
+    },
+
+    {
+      icon: <FaGitAlt color={'rgb(196, 67, 11)'} />,
+      stackName: 'GIT'
+    }
+
   ]
   const contact = [
     {
       icon: <RiLinkedinBoxFill />,
-      label: 'Linkedln',
-      value: "amanda-inagaki",
       link: 'https://www.linkedin.com/in/amanda-inagaki'
     },
 
     {
-      icon: <RiInstagramFill />,
-      label: 'Instagram',
-      value: '@inagaki.dev',
+      icon: <RiInstagramFill/>,
       link: 'https://www.instagram.com/inagaki.dev/'
     },
 
     {
       icon: <RiGithubFill />,
-      label: 'GitHub',
-      value: "inagakidev",
       link: 'https://github.com/inagakidev'
     }
   ]
@@ -210,6 +216,16 @@ function App() {
                 icon={cardStack[6].icon}
                 stackName={cardStack[6].stackName}
               />
+
+              <CardStack
+                icon={cardStack[7].icon}
+                stackName={cardStack[7].stackName}
+              />
+
+              <CardStack
+                icon={cardStack[8].icon}
+                stackName={cardStack[8].stackName}
+              />
             </div>
           </section>
 
@@ -225,24 +241,33 @@ function App() {
 
             <div className={styles.projectsCards}>
               <CardProject
-                title="E-commerce Platform"
-                description="Scalable online store with payment integration."
-                tags={["Next.js", "Stripe", "MongoDB"]}
+                title="Site - Canil Mr. Beagle"
+                description="Site institucional desenvolvido do zero para um canil, incluindo prototipação no Figma e desenvolvimento com HTML, CSS e JavaScript, com foco em experiência do usuário e responsividade. "
+                tags={["HTML", "CSS","JavaScript","Figma"]}
+                github="https://github.com/seu-repo"
+                demo="https://canilmrbeagle.com.br"
+                image={canilImg}
               />
               <CardProject
-                title="E-commerce Platform"
-                description="Scalable online store with payment integration."
-                tags={["Next.js", "Stripe", "MongoDB"]}
+                title="Meu Projeto"
+                description="Projeto incrível"
+                tags={["React", "CSS"]}
+                github="https://github.com/seu-repo"
+                demo="https://seusite.com"
               />
               <CardProject
-                title="E-commerce Platform"
-                description="Scalable online store with payment integration."
-                tags={["Next.js", "Stripe", "MongoDB"]}
+                title="Meu Projeto"
+                description="Projeto incrível"
+                tags={["React", "CSS"]}
+                github="https://github.com/seu-repo"
+                demo="https://seusite.com"
               />
               <CardProject
-                title="E-commerce Platform"
-                description="Scalable online store with payment integration."
-                tags={["Next.js", "Stripe", "MongoDB"]}
+                title="Meu Projeto"
+                description="Projeto incrível"
+                tags={["React", "CSS"]}
+                github="https://github.com/seu-repo"
+                demo="https://seusite.com"
               />
             </div>
           </section>
@@ -255,8 +280,9 @@ function App() {
                   span={header[3].span}
                 />
                 <p>Aberta a projetos freelance, colaborações e oportunidades full-time. Vamos conversar.</p>
-              </div>     
 
+                <ContactForm/>
+              </div>     
           <div className={styles.cardContact}>
             <CardContact
               icon={contact[0].icon}
@@ -278,9 +304,11 @@ function App() {
             />
           </div>
           </section>
-
       </main>
-      <Footer/>
+
+      <footer>
+        <Footer/>
+      </footer>
     </>
   );
 }
